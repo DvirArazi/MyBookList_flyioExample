@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 # הרצת הפרוייקט
 
 על מנת להריץ את השרת מבלי להצטרך לפתוח את סביבת הפיתוח כמנהל, ניתן לאפשר גישה לפורט רצוי (במקרה שלנו, פורט 5000) בעזרת פתיחת שורת המשימות כמנהל והרצת הפקודה:
 
-=======
 ## תנאים מוקדמים
 - התקינו את [VS Code](https://code.visualstudio.com/download)
 - התקינו את [NET Framework.](https://dotnet.microsoft.com/en-us/download)
@@ -14,7 +12,7 @@ powershell -c "irm bun.sh/install.ps1 | iex"
 bun add -g typescript
 ```
 - תנו לתוכנה גישה לפורט הרצוי (במקרה שלנו, פורט 5000) בעזרת פתיחת שורת המשימות כמנהל והרצת הפקודה:
->>>>>>> template/main
+
 ```
 netsh http add urlacl url=http://*:5000/ user=Everyone
 ```
