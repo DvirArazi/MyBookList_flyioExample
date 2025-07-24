@@ -6,7 +6,7 @@ class Program
 {
   static void Main()
   {
-    string port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
+    var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
 
     var server = new Server(port);
 

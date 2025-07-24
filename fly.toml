@@ -4,7 +4,7 @@
 #
 
 app = 'my-book-list'
-primary_region = 'iad'
+primary_region = 'otp'
 
 [build]
   dockerfile = 'Dockerfile'
