@@ -78,7 +78,7 @@ public class Server
 {
   readonly HttpListener _listener;
 
-  public Server(int port)
+  public Server(string port)
   {
     _listener = new HttpListener();
     _listener.Prefixes.Add($"http://*:{port}/");
@@ -271,6 +271,8 @@ public class DbBase : DbContext
 
   protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
   {
-    optionsBuilder.UseSqlite($"Data Source={_name}.sqlite");
+    var path = Environment.GetEnvironmentVariable("DATABASE_PATH") ?? "";
+
+    optionsBuilder.UseSqlite($"Data Source={path}{_name}.sqlite");
   }
 }
